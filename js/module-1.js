@@ -452,8 +452,68 @@
 // getShippingCost("Jamaica");
 // getShippingCost("Sweden");
 
-function getNameLength(name) {
-  const message = `Name ${name} is ${name.length} characters long`; // Change this line
+// function getNameLength(name) {
+//   const message = `Name ${name} is ${name.length} characters long`; // Change this line
 
-  return message;
-}
+//   return message;
+// }
+
+// Завдання 32
+
+// function getSubstring(string, length) {
+//   const substring = string.slice(0, length);
+//   console.log(substring);
+//   return substring;
+// }
+// getSubstring("Hello world", 3);
+// getSubstring("Hello world", 6);
+
+// Завдання 33
+// function formatMessage(message, maxLength) {
+//   let result;
+//   // Change code below this line
+//   if (message.length > maxLength) {
+//     result = message.slice(0, maxLength) + "...";
+//   } else {
+//     result = message;
+//   }
+//   console.log(result);
+//   /// Change code above this line
+//   return result;
+// }
+// formatMessage("Curabitur ligula sapien", 16);
+
+// Завдання 36
+
+// function checkForSpam(message) {
+//   const normalizeMessage = message.toLowerCase();
+//   console.log(normalizeMessage);
+//   let result;
+
+//   if (normalizeMessage.includes("spam")) {
+//     result = true;
+//   } else if (normalizeMessage.includes("sale")) {
+//     result = true;
+//   } else {
+//     result = false;
+//   }
+//   console.log(result);
+//   /// Change code above this line
+//   return result;
+// }
+// checkForSpam("Latest technology news");
+// checkForSpam("JavaScript weekly newsletter");
+// checkForSpam("Get best sale offers now!");
+// checkForSpam("Amazing SalE, only tonight!");
+// checkForSpam("[SPAM] How to earn fast money?");
+
+// const fruit = "apple";
+
+// if (fruit === "apple" || fruit === "strawberry") {
+//   console.log("It is a red fruit!");
+// }
+
+// const redFruits = ["apple", "strawberry", "cherry", "cranberries"];
+// const fruit = "cherry";
+// // Перевіряємо присутність елемента
+// const hasFruit = redFruits.includes(fruit);
