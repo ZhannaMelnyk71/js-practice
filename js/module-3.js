@@ -217,21 +217,205 @@
 
 // calculateTotalPrice("Radar")
 
-const colors = [
-  { hex: "#f44336", rgb: "244,67,54" },
-  { hex: "#2196f3", rgb: "33,150,243" },
-  { hex: "#4caf50", rgb: "76,175,80" },
-  { hex: "#ffeb3b", rgb: "255,235,59" },
-];
+// const colors = [
+//   { hex: "#f44336", rgb: "244,67,54" },
+//   { hex: "#2196f3", rgb: "33,150,243" },
+//   { hex: "#4caf50", rgb: "76,175,80" },
+//   { hex: "#ffeb3b", rgb: "255,235,59" },
+// ];
 
-const hexColors = [];
-const rgbColors = [];
-// Change code below this line
+// const hexColors = [];
+// const rgbColors = [];
+// // Change code below this line
 
-for (const color of colors) {
-  const { hex, rgb } = color;
-  hexColors.push(hex);
-  rgbColors.push(rgb);
+// for (const color of colors) {
+//   const { hex, rgb } = color;
+//   hexColors.push(hex);
+//   rgbColors.push(rgb);
 
-  console.log(hexColors);
-}
+//   console.log(hexColors);
+// }
+
+// Завдання 27
+// const scores = [89, 64, 42, 17, 93, 51, 26];
+// // Change code below this line
+// const bestScore = (Math.max(...scores));
+// const worstScore = (Math.min(...scores));
+
+// // В консолі буде набір окремих чисел
+// console.log(...temps);
+// // ✅ Розподілимо колекцію елементів у якості окремих аргументів
+// console.log(Math.max(...temps)); // 25
+
+// Завдання 28
+// const firstGroupScores = [64, 42, 93];
+// const secondGroupScores = [89, 14, 51, 26];
+// const thirdGroupScores = [29, 47, 18, 97, 81];
+// // Change code below this line
+// const allScores = [
+//   ...firstGroupScores,
+//   ...secondGroupScores,
+//   ...thirdGroupScores,
+// ];
+// const bestScore = Math.max(...allScores);
+// const worstScore = Math.min(...allScores);
+
+// function multiply(...args) {
+//   console.log(args); // масив усіх аргументів
+// }
+
+// multiply(1, 2);
+// multiply(1, 2, 3);
+// multiply(1, 2, 3, 4);
+
+// Завдання 31
+
+// function add(...args) {
+//   console.log(args);
+//   let total = 0;
+
+//   for(const arg of args){
+//     total+=arg;
+//   }
+//   return total
+//   // Change code above this line
+// }
+// add(15, 27);
+// add(32, 6, 13, 19, 8)
+
+// function multiply(firstNumber, secondNumber, ...otherArgs) {
+//   console.log(firstNumber); // Значення першого аргументу
+//   console.log(secondNumber); // Значення другого аргументу
+//   console.log(otherArgs); // Масив інших аргументів
+// }
+
+// multiply(1, 2);
+// multiply(1, 2, 3);
+// multiply(1, 2, 3, 4);
+
+// Завдання 32
+// function addOverNum(firstNumber, ...otherArgs) {
+//   let total = 0;
+
+//   for (const arg of otherArgs) {
+//     if (arg > firstNumber) {
+//       total += arg;
+//     }
+//   }
+
+//   return total;
+//   // Change code above this line
+// }
+
+// addOverNum(10, 12, 4, 11, 48, 10, 8);
+
+// Завдання 33
+
+// function findMatches(firstArg, ...otherArgs) {
+//   const matches = []; // Don't change this line
+
+//   for (const arg of otherArgs) {
+//     for (const number of firstArg) {
+//       if (arg === number) {
+//         matches.push(arg);
+//       }
+//     }
+//   }
+
+//   // Change code above this line
+//   return matches;
+// }
+
+// findMatches([1, 2, 3, 4, 5], 1, 8, 2, 7);
+
+// Завдання 35
+
+// const bookShelf = {
+//   books: ["The last kingdom", "Haze", "The guardian of dreams"],
+//   updateBook(oldName, newName) {
+//     // Change code below this line
+//     const bookIndex = this.books.indexOf(oldName);
+//     this.books.splice(bookIndex, 1, newName);
+
+//     // Change code above this line
+//   },
+// };
+
+// Завдання 37
+
+// const atTheOldToad = {
+//   potions: ["Speed potion", "Dragon breath", "Stone skin"],
+//   // Change code below this line
+//   getPotions() {
+//     console.log(this);
+//     return this.potions;
+//   },
+
+// };
+
+// const bookShelf = {
+//   books: ["Останнє королівство"],
+//   getBooks() {
+//     return this.books;
+//   },
+//   addBook(bookName) {
+//     this.books.push(bookName);
+//   },
+//   removeBook(bookName) {
+//     const bookIndex = this.books.indexOf(bookName);
+//     this.books.splice(bookIndex, 1);
+//   },
+// };
+
+// console.log(bookShelf.getBooks()); // ["Останнє королівство"]
+// bookShelf.addBook("Імла");
+// bookShelf.addBook("Страж снів");
+// console.log(bookShelf.getBooks()); // ["Останнє королівство", "Імла", "Страж снів"]
+// bookShelf.removeBook("Імла");
+// console.log(bookShelf.getBooks()); // ["Останнє королівство", "Страж снів"]
+
+
+
+
+const atTheOldToad = {
+  potions: [
+    { name: "Speed potion", price: 460 },
+    { name: "Dragon breath", price: 780 },
+    { name: "Stone skin", price: 520 },
+  ],
+  // Change code below this line
+  getPotions() {
+    return this.potions;
+  },
+  addPotion(newPotion) {
+    for(const potion of this.potions)
+    if (potion.name===newPotion.name) {
+      return `Error! Potion ${newPotion.name} is already in your inventory!`;
+    }
+
+    this.potions.push(newPotion);
+  },
+  removePotion(potionName) {
+    for(let i=0; i<this.potions.length; i+=1){
+      if (potionName === this.potions[i].name){
+        this.potions.splice(i, 1);
+        return;
+      }
+    }
+      return `Potion ${potionName} is not in inventory!`;
+    }
+
+  },
+  updatePotionName(oldName, newName) {
+    for (let i=0; i < this.potions.length; i+=1){
+      if(oldName === this.potions[i].name){
+        this.potions[i].name = newName;
+        return;
+      }
+
+    }
+
+  },
+  // Change code above this line
+};
+atTheOldToad.getPotions()
