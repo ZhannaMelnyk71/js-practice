@@ -313,3 +313,149 @@
 // const uniqueGenres = allGenres.filter(
 //   (genre, index, array) => array.indexOf(genre) === index
 // );
+
+// Завдання 21
+// const books = [
+//   {
+//     title: "The Last Kingdom",
+//     author: "Bernard Cornwell",
+//     rating: 8.38,
+//   },
+//   {
+//     title: "Beside Still Waters",
+//     author: "Robert Sheckley",
+//     rating: 8.51,
+//   },
+//   {
+//     title: "The Dream of a Ridiculous Man",
+//     author: "Fyodor Dostoevsky",
+//     rating: 7.75,
+//   },
+//   { title: "Redder Than Blood", author: "Tanith Lee", rating: 7.94 },
+//   { title: "Enemy of God", author: "Bernard Cornwell", rating: 8.67 },
+// ];
+
+// const MIN_RATING = 8;
+// const AUTHOR = "Bernard Cornwell";
+// // Change code below this line
+
+// const topRatedBooks = books.filter((book) => book.rating >= MIN_RATING);
+// console.log(topRatedBooks);
+// const booksByAuthor = books.filter((book) => book.author === AUTHOR);
+// console.log(booksByAuthor);
+
+// Завдання 22
+// const getUsersWithEyeColor = (users, color) => {
+//   const a = users.filter((user) => user.eyeColor === color);
+//   return a;
+// };
+
+// Завдання 23
+// const getUsersWithAge = (users, minAge, maxAge) => {
+//   const age = users.filter((user) => user.age > minAge && user.age < maxAge);
+//   return age;
+// };
+
+// Завдання 24
+// const getUsersWithFriend = (users, friendName) => {
+//   const a = users.filter((user) => user.friends.includes(friendName));
+//   return a;
+// };
+
+// Завдання 25
+// const getFriends = (users) => {
+//   const allFriends = users.flatMap((user) => user.friends);
+//   console.log(allFriends);
+//   const uniqueFriends = allFriends.filter(
+//     (friend, index, array) => array.indexOf(friend) === index
+//   );
+//   return uniqueFriends;
+// };
+
+// Завдання 26
+// const getActiveUsers = (users) => {
+//   const active = users.filter((user) => user.isActive === true);
+//   return active;
+// };
+
+// Завдання 27
+// const getInactiveUsers = (users) => {
+//   const notActive = users.filter((user) => user.isActive === !true);
+//   return notActive;
+// };
+
+// Завдання 28
+// const books = [
+//   {
+//     title: "The Last Kingdom",
+//     author: "Bernard Cornwell",
+//     rating: 8.38,
+//   },
+//   {
+//     title: "Beside Still Waters",
+//     author: "Robert Sheckley",
+//     rating: 8.51,
+//   },
+//   {
+//     title: "The Dream of a Ridiculous Man",
+//     author: "Fyodor Dostoevsky",
+//     rating: 7.75,
+//   },
+//   { title: "Redder Than Blood", author: "Tanith Lee", rating: 7.94 },
+// ];
+// const BOOK_TITLE = "The Dream of a Ridiculous Man";
+// const AUTHOR = "Robert Sheckley";
+// // Change code below this line
+
+// const bookWithTitle = books.find((book) => book.title === BOOK_TITLE);
+// const bookByAuthor = books.find((book) => book.author === AUTHOR);
+
+// Завдання 29
+// const getUserWithEmail = (users, email) => {
+//   const a = users.find((user) => user.email === email);
+//   return a;
+// };
+
+// Завдання 30
+// const firstArray = [26, 94, 36, 18];
+// const secondArray = [17, 61, 23];
+// const thirdArray = [17, 26, 94, 61, 36, 23, 18];
+// // Change code below this line
+
+// const eachElementInFirstIsEven = firstArray.every((number) => number % 2 === 0);
+// const eachElementInFirstIsOdd = firstArray.every((number) => number % 2 > 0);
+
+// const eachElementInSecondIsEven = secondArray.every(
+//   (number) => number % 2 === 0
+// );
+// const eachElementInSecondIsOdd = secondArray.every((number) => number % 2 > 0);
+
+// const eachElementInThirdIsEven = thirdArray.every((number) => number % 2 === 0);
+// const eachElementInThirdIsOdd = thirdArray.every((number) => number % 2 > 0);
+
+// Завдання 31
+// const isEveryUserActive = (users) => {
+//   const a = users.every((user) => user.isActive);
+//   return a;
+// };
+
+// Завдання 32
+// const firstArray = [26, 94, 36, 18];
+// const secondArray = [17, 61, 23];
+// const thirdArray = [17, 26, 94, 61, 36, 23, 18];
+// // Change below this line
+
+// const anyElementInFirstIsEven = firstArray.some((number) => number % 2 === 0);
+// const anyElementInFirstIsOdd = firstArray.some((number) => number % 2 > 0);
+
+// const anyElementInSecondIsEven = secondArray.some((number) => number % 2 === 0);
+// const anyElementInSecondIsOdd = secondArray.some((number) => number % 2 > 0);
+
+// const anyElementInThirdIsEven = thirdArray.some((number) => number % 2 === 0);
+// const anyElementInThirdIsOdd = thirdArray.some((number) => number % 2 > 0);
+
+// Завдання 33
+// const isAnyUserActive = (users) => {
+//   const a = users.some((user) => user.isActive);
+//   return a;
+// };
