@@ -459,3 +459,134 @@
 //   const a = users.some((user) => user.isActive);
 //   return a;
 // };
+
+// let a;
+// const b = " ";
+
+// if (b === 0) {
+//   a = 0;
+// } else if (b > 0) {
+//   a = 1;
+// } else if (b < 0) {
+//   a = -1;
+// } else {
+//   console.log("невірне значення");
+// }
+
+// console.log(a);
+
+// Завдання 35
+// const players = [
+//   { name: "Mango", playtime: 1270, gamesPlayed: 4 },
+//   { name: "Poly", playtime: 469, gamesPlayed: 2 },
+//   { name: "Ajax", playtime: 690, gamesPlayed: 3 },
+//   { name: "Kiwi", playtime: 241, gamesPlayed: 1 },
+// ];
+// // Change code below this line
+
+// const totalAveragePlaytimePerGame = players.reduce((total, player) => {
+//   return total + player.playtime / player.gamesPlayed;
+// }, 0);
+
+// Завдання 36
+// Change code below this line
+// const calculateTotalBalance = (users) =>
+//   users.reduce((total, user) => {
+//     return total + user.balance;
+//   }, 0);
+
+// Завдання 37
+// const getTotalFriendCount = users => users.reduce((totalFriends, user) => {
+//   return totalFriends + user.friends.length;
+// }, 0);
+
+// Завдання 39
+// const releaseDates = [2016, 1967, 2008, 1984, 1973, 2012, 1997];
+// // Change code below this line
+
+// const ascendingReleaseDates = [...releaseDates].sort((a, b) => a - b);
+
+// const descendingReleaseDates = [...releaseDates].sort((a, b) => b - a);
+
+// Завдання 40
+// const authors = [
+//     "Tanith Lee",
+//     "Bernard Cornwell",
+//     "Robert Sheckley",
+//     "Fyodor Dostoevsky",
+//     "Howard Lovecraft",
+//   ];
+//   // Change code below this line
+  
+//   const authorsInAlphabetOrder = [...authors].sort((a, b) => a.localeCompare(b));
+  
+//   const authorsInReversedOrder = [...authors].sort((a, b) => b.localeCompare(a));
+
+
+// Завдання 41
+// const books = [
+//     {
+//       title: "The Last Kingdom",
+//       author: "Bernard Cornwell",
+//       rating: 8.38,
+//     },
+//     {
+//       title: "Beside Still Waters",
+//       author: "Robert Sheckley",
+//       rating: 8.51,
+//     },
+//     {
+//       title: "The Dream of a Ridiculous Man",
+//       author: "Fyodor Dostoevsky",
+//       rating: 7.75,
+//     },
+//     { title: "Redder Than Blood", author: "Tanith Lee", rating: 7.94 },
+//     { title: "Enemy of God", author: "Bernard Cornwell", rating: 8.67 },
+//   ];
+//   // Change code below this line
+  
+//   const sortedByAuthorName = [...books].sort((firstBook, secondBook) => firstBook.author.localeCompare(secondBook.author));
+  
+//   const sortedByReversedAuthorName = [...books].sort((a,b) => b.author.localeCompare(a.author));
+  
+//   const sortedByAscendingRating = [...books].sort((a,b) => a.rating-b.rating);
+  
+//   const sortedByDescentingRating = [...books].sort((a,b) => b.rating-a.rating);
+
+
+// Завдання 43
+// const sortByDescendingFriendCount = users => [...users].sort((userA, userB) => userB.friends.length - userA.friends.length);
+
+
+const books = [
+    {
+      title: "The Last Kingdom",
+      author: "Bernard Cornwell",
+      rating: 8.38,
+    },
+    {
+      title: "Beside Still Waters",
+      author: "Robert Sheckley",
+      rating: 8.51,
+    },
+    {
+      title: "The Dream of a Ridiculous Man",
+      author: "Fyodor Dostoevsky",
+      rating: 7.75,
+    },
+    { title: "Redder Than Blood", author: "Tanith Lee", rating: 7.94 },
+    {
+      title: "The Dreams in the Witch House",
+      author: "Howard Lovecraft",
+      rating: 8.67,
+    },
+  ];
+  const MIN_BOOK_RATING = 8;
+  // Change code below this line
+  
+  const names = [...books].filter(book => book.rating >= MIN_BOOK_RATING);
+ 
+  console.log(names)
+  
+
+  // .map(book => book.name).sort((a, b) => a.author.localeCompare(b.author))
